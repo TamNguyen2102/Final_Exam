@@ -1,0 +1,16 @@
+:root {
+    --text-color: red;/*global variable*/
+}
+
+li {
+    color: var(--text-color);
+}
+
+h2 {
+    --my-color: blue;/*local variable*/
+    color: var(--my-color);
+}
+
+p {
+    color: var(--my-color);/*local variable don't work*/
+}
