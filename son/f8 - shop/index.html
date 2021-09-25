@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="main.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
-</head>
-<style>
-    .box{
-        width: 100%;
-        height: 100px;
-        background-color: saddlebrown;
+  </head>
+  <style>
+    body {
+      margin: 0;
     }
-    .box::after{
-        content: "Test";
+    .box {
+      width: 300px;
+      height: 100px;
+      background-color: saddlebrown;
+      position: relative;
     }
-    .box:hover{
-        background-color: blue;
+    .box::after {
+      display: block;
+      content: "After";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      background-color: black;
     }
-    #box1.box{
-        width: 100%;
-        height: 100px;
-        background-color: red;
+    .box::before {
+      width: 50px;
+      height: 50px;
+      display: block;
+      content: "Before";
+      background-color: blue;
     }
-    #box1.box::after{
-        content: "Test";
+
+    /* .box:hover {
+      background-color: blue;
+      font-size: 3rem;
+    } */
+    #box1.box {
+      width: 100%;
+      height: 100px;
+      background-color: red;
     }
-    #box1.box:hover{
-        background-color: green;
+    #box1.box::after {
+      content: "Test";
     }
-    h1::first-letter{
-        font-size: 100px;
-        color: indigo;
+    #box1.box:hover {
+      background-color: green;
     }
-</style>
-<body>
+    h1::first-letter {
+      font-size: 100px;
+      color: indigo;
+    }
+  </style>
+  <body>
     <h1>Test</h1>
     <p>Test</p>
     <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
+      <li>1 Liawedas</li>
+      <li>
+        2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, aut?
+      </li>
+      <li>
+        3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+        atque voluptate recusandae porro placeat repudiandae. Praesentium sequi
+        quo laborum sint quisquam minus? Sit accusantium similique voluptates
+        repellendus, architecto magnam numquam, laudantium deserunt delectus
+        harum dolore dolor nisi officiis soluta rem et eaque beatae. Eligendi
+        explicabo delectus id amet molestias. Numquam, facere facilis. Neque
+        tempora at asperiores fugiat autem quas eveniet fuga eius commodi,
+        molestias error impedit suscipit laudantium, praesentium facilis.
+      </li>
+      <li>4</li>
     </ul>
-    <div class ="box"></div>
-    <div id ="box1" class ="box"></div>
-</body>
+
+    <div class="box"></div>
+    <div id="box1" class="box"></div>
+  </body>
 </html>
