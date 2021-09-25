@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  background-color: #333;
+  color: white;
+}
+.main::before {
+  content: "Flex container";
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 2rem;
+}
+.main__item {
+  height: 10rem;
+  width: 7rem;
+  background-color: yellow;
+  border: 1px solid black;
+  color: black;
+}
+.main__item__1 {
+  height: 5rem;
+  align-self: flex-start;
+}
+.main__item__3 {
+  height: 7rem;
+  align-self: end;
+}
+
+.axis {
+  position: absolute;
+}
+.axis::after {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: blue;
+  white-space: nowrap;
+  writing-mode: sideways-lr;
+}
+.axis__cross {
+  bottom: 0;
+  top: 0;
+  width: 4px;
+  transform: translateX(-50%);
+  background-color: blue;
+}
+.axis__cross::after {
+  content: "Cross Axis";
+}
+.axis__main {
+  left: 0;
+  right: 0;
+  height: 4px;
+  width: 100%;
+  background-color: red;
+}
+.axis__main::after {
+  content: "Main Axis";
+  writing-mode: horizontal-tb;
+  color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */
