@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<style>
+    .box{
+        width: 100%;
+        height: 100px;
+        background-color: saddlebrown;
+    }
+    .box::after{
+        content: "Test";
+    }
+    .box:hover{
+        background-color: blue;
+    }
+    #box1.box{
+        width: 100%;
+        height: 100px;
+        background-color: red;
+    }
+    #box1.box::after{
+        content: "Test";
+    }
+    #box1.box:hover{
+        background-color: green;
+    }
+    h1::first-letter{
+        font-size: 100px;
+        color: indigo;
+    }
+</style>
+<body>
+    <h1>Test</h1>
+    <p>Test</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div class ="box"></div>
+    <div id ="box1" class ="box"></div>
+</body>
+</html>
