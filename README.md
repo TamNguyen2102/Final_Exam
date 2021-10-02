@@ -10,4 +10,4 @@ Final Exam repo for school education
 |Khang| Câu 2 của lab 1| Yêu cầu hoàn thành đủ 4 requirment đầu, yêu cầu 5 của bài làm có thể hỏi nhóm trưởng| 6/10 | Uncompleted |
 
 * Lưu ý: Câu 3 là phần quan trọng cần nắm của HTMl, ai hoàn thành phần việc của mình có thể làm chung với nhóm trưởng để hiểu rõ.
-* Yêu cầu: Khi hoàn thành các thành thành viên phải push file vào folder lab của repo.
+* Yêu cầu: Khi hoàn thành các thành thành viên phải push file vào folder Lab_School của repo.
