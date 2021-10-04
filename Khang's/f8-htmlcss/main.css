@@ -1,20 +1,20 @@
 h1 {
-    color: purple;
-    font-size: 100px;
+  color: purple;
+  font-size: 100px;
 }
 
 #first-heading {
-    color: red;
+  color: red;
 }
 
 .second-heading {
-    color: blue;
+  color: blue;
 }
 
 * /*universal*/ {
-    color: red;
+  color: red;
 }
 
-html /*inherited*/{
-    color:seagreen;
+html /*inherited*/ {
+  color: seagreen;
 }
