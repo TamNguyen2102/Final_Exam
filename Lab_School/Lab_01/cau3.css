@@ -68,6 +68,11 @@ body {
   font-weight: 500;
 }
 
+.score {
+  display: flex;
+  align-items: center;
+}
+
 .ide {
   display: flex;
   flex-direction: column;
