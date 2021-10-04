@@ -21,11 +21,41 @@ body {
 
 /* Form */
 .form {
+  position: relative;
   padding: 1rem 2rem;
 
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.decor {
+  position: absolute;
+  bottom: 55%;
+  left: -2%;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(rgb(197, 209, 26), rgb(248, 2, 2)) fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
+}
+.decor::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid black;
+  transform: rotate(-45deg);
 }
 .form div {
   display: flex;
