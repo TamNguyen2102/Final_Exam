@@ -13,176 +13,194 @@
 -->
 
 <html>
-    <!-- Phần đầu -->
-    <head>
-        <title>Tuyệt kiếm cổ phong</title>
-        <meta charset = "utf-8">
-        <link rel="stylesheet" href="mainfor14.css"> <!--external-->
-         <!-- Độ ưu tiên CSS: 
+  <!-- Phần đầu -->
+  <head>
+    <title>Tuyệt kiếm cổ phong</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="mainfor14.css" />
+    <!--external-->
+    <!-- Độ ưu tiên CSS: 
             Internal, External code nào ở dưới sẽ overwrite ở trên 
             Tuy nhiên inline > #id > .class > tag > universal * > inherited
             Khi gọi giống nhau mới hơn overwrite
             Khi gọi element có nhiều tag, gọi nhiều tag sẽ > gọi 1 tag hơn 
             Khi có !important thì auto > nhất nhưng khi có nhiều important thì xét lại từ đầu
         -->
-        <style>
+    <style>
+      #heading-id.heading-class {
+        color: violet !important;
+      }
 
-                #heading-id.heading-class{
-                    color: violet !important;
-                }
+      #heading-id {
+        color: blue;
+      }
 
-                #heading-id{
-                    color: blue;
-                }
+      .heading-class {
+        color: yellow;
+      }
 
-                .heading-class {
-                    color: yellow;
-                }
+      h1 {
+        color: red;
+        font-size: 100px;
+      }
 
-                h1 {
-                    color: red;
-                    font-size: 100px;
-                }
-
-                /* 
+      /* 
                 absolute unit (không bị thay đổi theo độ phân giải giao diện): px, pt, cm, mm, inch, pc
                 relative unit (thay đổi theo độ phân giải giao diện): %, rem, em, vw, vh, vmin, vmax, ex, ch
                 */
-                .box {
-                    width: 50%;
-                    height: 100px;
-                    background-color: teal;
-                }
+      .box {
+        width: 50%;
+        height: 100px;
+        background-color: teal;
+      }
 
-                h1 {
-                    font-size: 1rem; /*rem phụ thuộc vào size html(thông dụng), em phụ thuộc vào thẻ gần nhất chứa nó được định dạng (ít dùng)*/
-                }
+      h1 {
+        font-size: 1rem; /*rem phụ thuộc vào size html(thông dụng), em phụ thuộc vào thẻ gần nhất chứa nó được định dạng (ít dùng)*/
+      }
 
-                /*vw viewport width (độ rộng trình duyệt theo %), vh viewport height*/
-                .box {
-                    width: 50vw;
-                    height: 100vh;
-                    background-color: teal;
-                }
+      /*vw viewport width (độ rộng trình duyệt theo %), vh viewport height*/
+      .box {
+        width: 50vw;
+        height: 100vh;
+        background-color: teal;
+      }
 
-                /* CSS functions: var(), linear-gradient(), rgba() (rgb với a = alpha: độ trong suốt màu), rgb(), calc(), attr()*/
-                .box {
-                    width: 50%;
-                    height: calc(500px - 200px);
-                    background-color: rgb(188, 42, 207);
-                }
-                
-                .box::after {
-                    content: attr(data-title);
-                }
-                a.f8link::after {
-                    content: " ("attr(href)")";
-                }
-            /*CSS Pseudo-class vài vd: :root (chỉ về thẻ root thường là html vd mainfor14.css), :hover (để chuột lên), :active (bấm vào và giữ), :first-child, :last-child*/
-                .box:hover {
-                    background-color:steelblue;
-                }
+      /* CSS functions: var(), linear-gradient(), rgba() (rgb với a = alpha: độ trong suốt màu), rgb(), calc(), attr()*/
+      .box {
+        width: 50%;
+        height: calc(500px - 200px);
+        background-color: rgb(188, 42, 207);
+      }
 
-                .box:active {
-                    background-color:tomato;
-                }
+      .box::after {
+        content: attr(data-title);
+      }
+      a.f8link::after {
+        content: " (" attr(href) ")";
+      }
+      /*CSS Pseudo-class vài vd: :root (chỉ về thẻ root thường là html vd mainfor14.css), :hover (để chuột lên), :active (bấm vào và giữ), :first-child, :last-child*/
+      .box:hover {
+        background-color: steelblue;
+      }
 
-                li:first-child {
-                    color:teal;
-                }
+      .box:active {
+        background-color: tomato;
+      }
 
-                li:last-child {
-                    color:yellowgreen
-                }
-            /*CSS Pseudo-element vài vd: ::before, ::after, ::first-letter, ::first-line, ::selection (kéo chuột lựa chọn)*/
-            .box1 {
-                width: 100%;
-                height: 120px;
-                background-color: violet;
-            }
+      li:first-child {
+        color: teal;
+      }
 
-            .box1::before {
-                content: "";
-                display: block; /* tạo cấu trúc khối giống div*/
-                width: 50px;
-                height: 50px;
-                background-color: white;
-            }
+      li:last-child {
+        color: yellowgreen;
+      }
+      /*CSS Pseudo-element vài vd: ::before, ::after, ::first-letter, ::first-line, ::selection (kéo chuột lựa chọn)*/
+      .box1 {
+        width: 100%;
+        height: 120px;
+        background-color: violet;
+      }
 
-            .box1::after {
-                content: "";
-                display: block; /* tạo cấu trúc khối giống div*/
-                width: 50px;
-                height: 50px;
-                background-color: white;
-            }
+      .box1::before {
+        content: "";
+        display: block; /* tạo cấu trúc khối giống div*/
+        width: 50px;
+        height: 50px;
+        background-color: white;
+      }
 
-            p::first-letter {
-                font-size: 300px;
-            }
+      .box1::after {
+        content: "";
+        display: block; /* tạo cấu trúc khối giống div*/
+        width: 50px;
+        height: 50px;
+        background-color: white;
+      }
 
-            p::first-line {
-                background-color: tomato;
-            }
+      p::first-letter {
+        font-size: 300px;
+      }
 
-            p::selection {
-                background-color: white;
-            }
-        </style> <!--internal-->
-    </head>
-   
-    <!-- Input -->
-    <input type="text">
+      p::first-line {
+        background-color: tomato;
+      }
 
-    <!-- Button -->
-    <button>Đăng nhập</button>
+      p::selection {
+        background-color: white;
+      }
+    </style>
+    <!--internal-->
+  </head>
 
-    <!-- Phần thân -->
-    <body>
-        <div class="box" data-title="hey man!"></div>
-        <div class="box1">
-            <div>A</div>
-            <div>B</div>
-        </div>
-        <a class= "f8link" href = "https://fullstack.edu.vn">Học lập trình</a>
-        <!-- Attribute title trong h1-->
-        <!-- <h1 title = "Đây là tiêu đề" <style = "color: red;font-size: 180px;">Tuyệt kiếm cổ phong!</h1> -->
-        <h1 style="color: brown" id="heading-id" class="heading-class" title = "Đây là tiêu đề">Tuyệt kiếm cổ phong!</h1>
-        <!-- id chỉ có một-->
-        <h2 id="first-heading">Tuyệt kiếm cổ phong!</h2>
-        <!-- class có thể dùng chung-->
-        <h2 class="second-heading">Tuyệt kiếm cổ phong!</h2>
-        <h2 class="second-heading">Tuyệt kiếm cổ phong!</h2>
-        <p>Xứng tầm game bom tấn định giá 46 tỷ, Tuyệt Kiếm Cổ Phong ngoài bản Mobile trên Android và iOS thì còn có cả phiên bản PC cực xịn, siêu nhẹ - siêu mượt cho các gamer trải nghiệm trên máy tính. </p>
-        <img src="https://scontent.fsgn13-1.fna.fbcdn.net/v/t1.6435-9/s1080x2048/205740274_131547529086497_8196938139083730497_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_ohc=IGYrSOUfMbAAX_Utl2X&_nc_ht=scontent.fsgn13-1.fna&oh=5fe1c1b90149dd642cfaaf79c9637c35&oe=616DC577" alt="">
-        <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Ftuyetkiem.vn%2Fdownload%3Ffbclid%3DIwAR0APSk1k0vQcuPdaGNqLzGA0ZRg4CBovXCY9pvxPtmpfJMwRf4rA9_FXiQ&h=AT224OYudQgQo5en223P6HuJAAOVTBIFl4jV_E9--ecV7c06VQddQZ_FGL0DZeLUBAZsp5K9TFIWQ7CZ66QCRUNeBNWuAHuuja_u7GsBFAOk-xc06ByS112-NwbVfgf6cxq28dNNJ64rMVYNtO6v&__tn__=-UK-R&c[0]=AT1TlzB4pABQAs-3-CSrsyiRaWDRl2tsB-m2pjGL_laxbEBS7ce3wXSqWvk-OCvwsZqMbgaBaEWl3Mzx6hJxQ5KfWLFLTMg2Gs85U81MHyDfJpJ5L_0r8Mw0DKK6ujMdGmBqcGTyg-57BFUYNwN9Oi5OUTfulr8zDHq6cYJECuUWb7EH40iXjFFpVldJw9fm9w2Cy-OJDEDMpsMBdWaTN9YrR813yvTrcAp0DlWWuOPR47FZzDVbyLmDjqVBNfDXQ9EWJ1YLulgY33S83TkKCgzCv3yuc7VeDyrBUig7pXiTIPyiQ7aEpYc4ykNRoD9VC-ZqPI8">Tới trang game</a>
-        <ul>
-            <li>Loan tin trailer</li>
-            <li>Đếm ngược 3 ngày</li>
-        </ul>
-        <div>
-            <table>
-                <thead>
-                    <!-- Table heading-->
-                    <th>STT</th>
-                    <th>Tên</th>
-                    <th>Đia chỉ</th>
-                </thead>
-    
-                <tbody>
-                    <!-- Table row -->
-                    <tr>
-                        <td>1</td>
-                        <td>Khang</td>
-                        <td>HCM</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Sơn</td>
-                        <td>HCM</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
+  <!-- Input -->
+  <input type="text" />
+
+  <!-- Button -->
+  <button>Đăng nhập</button>
+
+  <!-- Phần thân -->
+  <body>
+    <div class="box" data-title="hey man!"></div>
+    <div class="box1">
+      <div>A</div>
+      <div>B</div>
+    </div>
+    <a class="f8link" href="https://fullstack.edu.vn">Học lập trình</a>
+    <!-- Attribute title trong h1-->
+    <!-- <h1 title = "Đây là tiêu đề" <style = "color: red;font-size: 180px;">Tuyệt kiếm cổ phong!</h1> -->
+    <h1
+      style="color: brown"
+      id="heading-id"
+      class="heading-class"
+      title="Đây là tiêu đề"
+    >
+      Tuyệt kiếm cổ phong!
+    </h1>
+    <!-- id chỉ có một-->
+    <h2 id="first-heading">Tuyệt kiếm cổ phong!</h2>
+    <!-- class có thể dùng chung-->
+    <h2 class="second-heading">Tuyệt kiếm cổ phong!</h2>
+    <h2 class="second-heading">Tuyệt kiếm cổ phong!</h2>
+    <p>
+      Xứng tầm game bom tấn định giá 46 tỷ, Tuyệt Kiếm Cổ Phong ngoài bản Mobile
+      trên Android và iOS thì còn có cả phiên bản PC cực xịn, siêu nhẹ - siêu
+      mượt cho các gamer trải nghiệm trên máy tính.
+    </p>
+    <img
+      src="https://scontent.fsgn13-1.fna.fbcdn.net/v/t1.6435-9/s1080x2048/205740274_131547529086497_8196938139083730497_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=730e14&_nc_ohc=IGYrSOUfMbAAX_Utl2X&_nc_ht=scontent.fsgn13-1.fna&oh=5fe1c1b90149dd642cfaaf79c9637c35&oe=616DC577"
+      alt=""
+    />
+    <a
+      href="https://l.facebook.com/l.php?u=http%3A%2F%2Ftuyetkiem.vn%2Fdownload%3Ffbclid%3DIwAR0APSk1k0vQcuPdaGNqLzGA0ZRg4CBovXCY9pvxPtmpfJMwRf4rA9_FXiQ&h=AT224OYudQgQo5en223P6HuJAAOVTBIFl4jV_E9--ecV7c06VQddQZ_FGL0DZeLUBAZsp5K9TFIWQ7CZ66QCRUNeBNWuAHuuja_u7GsBFAOk-xc06ByS112-NwbVfgf6cxq28dNNJ64rMVYNtO6v&__tn__=-UK-R&c[0]=AT1TlzB4pABQAs-3-CSrsyiRaWDRl2tsB-m2pjGL_laxbEBS7ce3wXSqWvk-OCvwsZqMbgaBaEWl3Mzx6hJxQ5KfWLFLTMg2Gs85U81MHyDfJpJ5L_0r8Mw0DKK6ujMdGmBqcGTyg-57BFUYNwN9Oi5OUTfulr8zDHq6cYJECuUWb7EH40iXjFFpVldJw9fm9w2Cy-OJDEDMpsMBdWaTN9YrR813yvTrcAp0DlWWuOPR47FZzDVbyLmDjqVBNfDXQ9EWJ1YLulgY33S83TkKCgzCv3yuc7VeDyrBUig7pXiTIPyiQ7aEpYc4ykNRoD9VC-ZqPI8"
+      >Tới trang game</a
+    >
+    <ul>
+      <li>Loan tin trailer</li>
+      <li>Đếm ngược 3 ngày</li>
+    </ul>
+    <div>
+      <table>
+        <thead>
+          <!-- Table heading-->
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Đia chỉ</th>
+        </thead>
+
+        <tbody>
+          <!-- Table row -->
+          <tr>
+            <td>1</td>
+            <td>Khang</td>
+            <td>HCM</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sơn</td>
+            <td>HCM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>

@@ -4,7 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cau 2</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css" />
   </head>
-  <body></body>
+  <body>
+    <form
+      action="https://web-503073.herokuapp.com/lab01/login.php"
+      enctype="application/x-www-form-urlencoded"
+      method="POST"
+    >
+      <table>
+        <tr>
+          <td>Email</td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              placeholder="email@domain.com"
+              required="true"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>
+            <input
+              type="password"
+              name="password"
+              placeholder="********"
+              required="true"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Remember me</td>
+          <td><input type="checkbox" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Login" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Not registered? <a href="">Creat an account</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Forgot your password? <a href="">Click here to reset</a></td>
+        </tr>
+      </table>
+    </form>
+  </body>
 </html>
