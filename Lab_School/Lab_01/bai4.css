@@ -1,3 +1,9 @@
+/* Set box-sizing cho tất element */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 .page-head {
   text-align: center;
 }
@@ -7,23 +13,41 @@
 }
 
 .team {
-  border: 1px solid black;
   display: flex;
-  align-items: center;
+  /* nên dùng stretch vì nếu center thì các thẻ có thể bị lệch. Do height và width của mỗi item có thể khác nhau */
+  align-items: stretch;
+  /* align-items: center; */
   justify-content: space-around;
-  box-sizing: border-box;
+
+  border: 1px solid black;
+  /* Không khuyến khích để box-sizing cho một thẻ khi nó chưa bị lỗi tràn width */
+  /* box-sizing: border-box; */
 }
 
 .PersonalInfo {
-  width: 33%;
+  /* Không cần width khi nó là một item của flexbox */
+  /* width: 33%; */
   border: 1px solid black;
+  /* Sửa lại cho giống đề bài */
+  padding: 0.5rem;
+  /* --- */
   margin: 1px;
-  flex: 1;
+  flex: 1 1 auto;
+}
+
+/* Không để header rớt dòng */
+.PersonalInfo > h2 {
+  white-space: nowrap;
 }
 
 .responsive {
   width: 100%;
   height: auto;
+
+  /* Có thể tham khảo cách làm này */
+  /* width: 100%;
+  display: inline-block;
+  object-fit: cover; */
 }
 
 .jane {
