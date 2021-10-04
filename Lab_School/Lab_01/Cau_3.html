@@ -4,7 +4,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cau3.css" />
     <title>Cau 3</title>
   </head>
-  <body></body>
+  <body>
+    <form
+      class="form"
+      action="https://web-503073.herokuapp.com/lab01/register.php"
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <!--==== (div>(label+input))*9   HTML Emmet ====-->
+      <!-- Name -->
+      <div>
+        <label for="name">Your name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Full name"
+          required
+        />
+      </div>
+      <!-- Email -->
+      <div>
+        <label for="email">Email Address</label>
+        <input
+          id="email"
+          type="text"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+      <!-- Birthday -->
+      <div>
+        <label for="birthDay">Birthday</label>
+        <input id="birthDay" type="date" name="birthday" required />
+      </div>
+      <!-- Birthtime -->
+      <div>
+        <label for="birthTime">Birth Time</label>
+        <input type="time" name="birthtime" />
+      </div>
+      <!-- Gender -->
+      <div>
+        <label for="gender">Gender</label>
+        <!-- Male -->
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <!-- Female -->
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+      </div>
+      <!-- From -->
+      <div>
+        <label for="">From</label>
+        <select name="country">
+          <!-- Asia group -->
+          <optgroup label="Asia">
+            <option value="VietNam">VietNam</option>
+            <option value="Laos">Laos</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Singapore">Singapore</option>
+          </optgroup>
+          <!-- Europe group -->
+          <optgroup label="Europe">
+            <option value="France">France</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Italy">Italy</option>
+            <option value="Finlad">Finland</option>
+            <option value="Irelane">Ireland</option>
+          </optgroup>
+        </select>
+      </div>
+      <!-- Favorite IDE -->
+      <div>
+        <label>Favorite IDE</label>
+        <div class="ide">
+          <!-- Visual Studio Code -->
+          <div>
+            <input
+              type="checkbox"
+              name="favorite_ide"
+              id="VSCode"
+              value="Visual Studio Code"
+            />
+            <label for="VSCode">Visual Studio Code</label>
+          </div>
+          <!-- Sublime Text -->
+          <div>
+            <input
+              type="checkbox"
+              name="favorite_ide"
+              id="Sublime"
+              value="Sublime Text"
+            />
+            <label for="Sublime">Sublime Text</label>
+          </div>
+          <!-- Eclipse -->
+          <div>
+            <input
+              type="checkbox"
+              name="favorite_ide"
+              id="Eclipse"
+              value="Eclipse"
+            />
+            <label for="Eclipse">Eclipse</label>
+          </div>
+          <!-- Atom -->
+          <div>
+            <input type="checkbox" name="favorite_ide" id="Atom" value="Atom" />
+            <label for="Atom">Atom</label>
+          </div>
+          <!-- Inteliji Idea -->
+          <div>
+            <input
+              type="checkbox"
+              name="favorite_ide"
+              id="Inteliji"
+              value="Inteliji Idea"
+            />
+            <label for="Inteliji">Inteliji Idea</label>
+          </div>
+        </div>
+      </div>
+      <!-- TOEIC Score -->
+      <div>
+        <label for="score">TOEIC Score</label>
+        <input
+          id="scoreRange"
+          name="toeic"
+          type="range"
+          min="5"
+          max="990"
+          step="5"
+          value="500"
+        />
+        <p id="score">500</p>
+      </div>
+      <!-- Message -->
+      <div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="20" rows="5"></textarea>
+      </div>
+
+      <!-- Button group -->
+      <btnGroup class="btn-group">
+        <button type="submit">Register</button>
+        <button type="reset">Again</button>
+      </btnGroup>
+    </form>
+  </body>
+
+  <script>
+    const scoreRange = document.querySelector("#scoreRange");
+    const score = document.querySelector("#score");
+    scoreRange.addEventListener("input", (e) => {
+      scoreRange.value = e.target.value;
+      score.innerHTML = scoreRange.value;
+    });
+  </script>
 </html>
