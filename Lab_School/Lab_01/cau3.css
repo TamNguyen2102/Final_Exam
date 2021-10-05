@@ -73,6 +73,17 @@ body {
   align-items: center;
 }
 
+.score div {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.score input {
+  width: 100%;
+}
+
 .ide {
   display: flex;
   flex-direction: column;
