@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+    <style>
+        .team {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+
+        .PersonalInfo {
+            width: 33%;
+            border: 1px solid black;
+            margin: 1px;
+            flex: 1;
+        }
+
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-head">
+      <h1>About us</h1>
+      <p>
+        Some text about who we are and what we do. <br />
+        Resize the browser window to see that this page is responsive by the
+        way.
+      </p>
+    </div>
+    <div class="page-body">
+      <h2 class="body-head">Our team</h2>
+      <div class="team">
+        <div class="PersonalInfo">
+          <img src="https://drive.google.com/uc?id=1JdiDfl1uYvzyf-cENQKg9Qf2ppw39LSk" alt="" class="responsive" />
+          <h2>Jane Doe</h2>
+          <p>CEO & Founder</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Specializes in</p>
+          <ul class="jane">
+            <li>Javascript</li>
+            <li>C/C++</li>
+            <li>Java</li>
+          </ul>
+          <button>Contact</button>
+        </div>
+        <div class="PersonalInfo">
+          <img src="https://drive.google.com/uc?id=18Jnm3awNmGkE6MMQUgAbkSWHRDqmAKlh" alt="" class="responsive" />
+          <h2>Johnny Depp</h2>
+          <p>Product Owner</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Specializes in</p>
+          <ul class="johnny">
+            <li>Objective C</li>
+            <li>Swift</li>
+            <li>C/C++</li>
+          </ul>
+          <button>Contact</button>
+        </div>
+        <div class="PersonalInfo">
+          <img src="https://drive.google.com/uc?id=1LOKYO11t75lwOiePmm6bUo08IToSfQFH" alt="" class="responsive" />
+          <h2>Luke Evans</h2>
+          <p>Team Leader</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Specializes in</p>
+          <ul class="luke">
+            <li>C#</li>
+            <li>Visual Basic</li>
+            <li>Typescript</li>
+          </ul>
+          <button>Contact</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
