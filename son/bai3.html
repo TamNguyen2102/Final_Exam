@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <style>
+        table{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://web-503073.herokuapp.com/lab01/register.php" method="POST">
+        <table width="500" height="200" border="1" >
+            <tr>
+                <td style="border: 0px;">Your Name</td>
+                <td style="border: 0px;"><input required type="text" placeholder="Full Name" size="40" name="name"></td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">Email Address</td>
+                <td style="border: 0px;"><input required type="email" placeholder="Email" name="email"></td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">Birthday</td>
+                <td style="border: 0px;"><input type="date" name="birthday" max="2021-12-31"></td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">Birthtime</td>
+                <td style="border: 0px;"><input type="time" name="birthtime"></td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">Gender</td>
+                <td style="border: 0px;"><input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female</td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">From</td>
+                <td style="border: 0px;">
+                    <select name="country" >
+                        <option >Select a country</option>
+                        <optgroup label="Asia">
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="1">Laos</option>
+                            <option value="2">Cambodia</option>
+                            <option value="3">Singapore</option></optgroup>
+                        <optgroup label="Europe">
+                            <option value="4">France</option>
+                            <option value="5">Belgium</option>
+                            <option value="6">Italy</option>
+                            <option value="7">Finland</option>
+                            <option value="8">Ireland</option></optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 0px">Favorite IDE</td>
+                <td style="border: 0px;">
+                    <input type="checkbox" name="favorite_ide[]" value="Visual Studio Code"> Visual Studio Code<br/>
+                    <input type="checkbox" name="favorite_ide[]" value="Sublime Text"> Sublime Text<br/>
+                    <input type="checkbox" name="favorite_ide[]" value="Eclipse"> Eclipse<br/>
+                    <input type="checkbox" name="favorite_ide[]" value="Intelij Idea"> Intelij Idea<br/>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">TOEIC Score</td>
+                <td style="border: 0px;">
+                    <div class="slidecontainer">
+                        <input type="range" min="5" max="990" value="5" class="slider" id="myRange" name="toeic">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 0px;">Message</td>
+                <td style="border: 0px;">
+                    <textarea name="message"  cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 0px;"></th>
+                <th style="border: 0px;">
+                    <button enctype="application/x-www-form-urlencoded">Register</button>
+                    <input type="reset" value="Again">
+                </th>
+
+            </tr>
+
+        </table>
+    </form>    
+</body>
+</html>
