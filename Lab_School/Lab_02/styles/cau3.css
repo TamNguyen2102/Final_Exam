@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 540px;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+@media (max-width: 720px) {
+  body {
+    height: auto;
+  }
+}
+
+.header {
+  width: 100vw;
+  background-color: #092509;
+}
+.header h1 {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  font-size: 3rem;
+  color: white;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: stretch;
+  flex-grow: 1;
+  padding: 1rem;
+}
+@media (max-width: 720px) {
+  .main-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+@media (min-width: 720px) and (max-width: 1200px) {
+  .main-section {
+    flex-wrap: wrap;
+  }
+}
+.main-section__country {
+  margin-right: 1rem;
+}
+.main-section__country ul {
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 720x) {
+  .main-section__country ul {
+    margin: 0 5rem;
+  }
+}
+.main-section__country ul li {
+  width: 30vw;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  background-color: #35364e;
+}
+@media (max-width: 720px) {
+  .main-section__country ul li {
+    width: 90vw;
+  }
+}
+.main-section__article h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 720px) and (max-width: 1200px) {
+  .main-section__article {
+    width: 60vw;
+  }
+}
+.main-section__lorem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #3f3f3f;
+  color: white;
+}
+.main-section__lorem > * {
+  text-align: center;
+}
+.main-section__lorem__header {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+footer {
+  justify-self: end;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem;
+  background-color: #092509;
+  color: white;
+}
+
+/*# sourceMappingURL=cau3.css.map */
