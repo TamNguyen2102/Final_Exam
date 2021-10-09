@@ -1,0 +1,76 @@
+/* Thể hiện con của body dưới dạng flex trên trục dọc */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Đưa chữ của h3 ra giữa, viết hoa, đổi màu chữ */
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #388e3c;
+}
+
+/* Đổi khung viền của bảng thành loại đứt quãng với độ dày 3px và đổi màu */
+table {
+  border: 3px dashed #b00c2d;
+  border-collapse: collapse;
+}
+
+/* Đưa chữ của các ô ra giữa, tạo khoảng cách từ chữ tới 4 phía khung */
+td {
+  text-align: center;
+  padding: 12px;
+}
+
+/* Đổi màu nền, màu chữ; viết in hoa, đậm các ô trong lớp theader (gồm header của các cột ngoài cột lunch) */
+.theader {
+  background-color: #5f52ab;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Đổi màu nền của cả dòng header (theader-row) ngoài trừ lunch khi để chuột lên bất cứ ô theader nào ngoài trừ lunch */
+.theader-row:hover .theader {
+  background-color: #453b81;
+}
+
+/* Viết đậm các ngày (gồm các ô chứa ngày) */
+.days {
+  font-weight: bold;
+}
+
+/* Đổi màu nền và chữ ô ngày khi để chuột lên */
+.days:hover {
+  background-color: #5f52ab;
+  color: white;
+}
+
+/* Đổi màu nền và viết hoa chữ trong các ô trong lớp selftime (gồm ô lunch và lab) */
+.selftime {
+  background-color: #ffefb3;
+  text-transform: uppercase;
+}
+
+/* Đổi màu nền ô selftime khi để chuột lên (do ô lunch thuộc dòng theader-row nên khi để chuột lên ô lunch thì sẽ kích hoạt .theader-row:hover .theader ở trên nhưng trong video mẫu của giảng viên cũng có điểm này) */
+.selftime:hover {
+  background-color: #f1d15a;
+}
+
+/* Viết đậm chữ lunch trong lớp gồm cả selftime và lunch */
+.selftime.lunch {
+  font-weight: bold;
+}
+
+/* Đổi màu nên các ô thuộc lớp no-class (ô trống) */
+.no-class {
+  background-color: #e0e0e0;
+}
+
+/* Đổi màu nên các ô thuộc lớp no-class khi để chuột lên */
+.no-class:hover {
+  background-color: gray;
+}
