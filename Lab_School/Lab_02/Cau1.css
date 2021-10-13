@@ -23,6 +23,7 @@ table {
 td {
   text-align: center;
   padding: 12px;
+  border: 1px solid red;
 }
 
 /* Đổi màu nền, màu chữ; viết in hoa, đậm các ô trong lớp theader (gồm header của các cột ngoài cột lunch) */

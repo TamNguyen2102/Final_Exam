@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff8df;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.form > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.form > div > input {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.form > div > input:hover {
+  background-color: #fff5cf;
+}
+.form > div > input:focus {
+  background-color: #f3de8e;
+  border-color: #d97000;
+}
+.form > div > select {
+  width: 100%;
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  color: #bc1313;
+}
+
+.score > div {
+  width: 100%;
+}
+.score > div > #scoreRange {
+  width: 100%;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+button[type=submit] {
+  background-color: #dd2c2c;
+}
+
+button[type=reset] {
+  background-color: #e3a73f;
+}
+
+/*# sourceMappingURL=cau2.css.map */
