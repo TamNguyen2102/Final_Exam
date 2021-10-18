@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise3</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c70104d595.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="post">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="first-name" class="font-weight-bold"
+                >First name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First name"
+                id="first-name"
+                required="true"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="last-name" class="font-weight-bold">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last name"
+                id="last-name"
+                required="true"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="font-weight-bold">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            id="username"
+            required="true"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="font-weight-bold">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            id="password"
+            required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <div class="font-weight-bold mb-1">Gender</div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              type="radio"
+              id="customRadio1"
+              name="customRadio"
+              class="custom-control-input"
+              required="true"
+            />
+            <label class="custom-control-label" for="customRadio1">Male</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              type="radio"
+              id="customRadio2"
+              name="customRadio"
+              class="custom-control-input"
+              required="true"
+            />
+            <label class="custom-control-label" for="customRadio2"
+              >Female</label
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="country" class="font-weight-bold">Country</label>
+          <input
+            class="form-control"
+            list="datalistOptions"
+            id="country"
+            placeholder="Vietnam"
+            required="true"
+          />
+          <datalist id="datalistOptions">
+            <option value="San Francisco"></option>
+            <option value="New York"></option>
+            <option value="Seattle"></option>
+            <option value="Los Angeles"></option>
+            <option value="Chicago"></option>
+            <option value="Vietnam"></option>
+          </datalist>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+            />
+            <label for="customCheck1" class="custom-control-label"
+              >Remember me</label
+            >
+          </div>
+        </div>
+        <button class="btn btn-success px-5" type="submit">Login</button>
+        <button class="btn btn-outline-success px-5" type="reset">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>
