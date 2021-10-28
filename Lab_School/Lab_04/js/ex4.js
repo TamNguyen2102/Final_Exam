@@ -19,15 +19,12 @@ next.addEventListener("click", () => {
   img.src = `./images/${imgSrc}`;
 });
 
-let stop = false;
 start.addEventListener("click", () => {
   start.innerHTML = "Stop slideshow";
 
-  if (stop === false) {
-    const interval = setInterval(() => {
-      imgList.selectedIndex = imgList.selectedIndex + 1;
-      let imgSrc = imgList.options[imgList.selectedIndex].value;
-      img.src = `./images/${imgSrc}`;
-    }, 1500);
-  }
+  const interval = setInterval(() => {
+    imgList.selectedIndex = imgList.selectedIndex + 1;
+    let imgSrc = imgList.options[imgList.selectedIndex].value;
+    img.src = `./images/${imgSrc}`;
+  }, 1000);
 });
