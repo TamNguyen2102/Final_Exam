@@ -1,0 +1,107 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+$textColor: white;
+$accent-color: blue;
+$hot-color: red;
+$background: #333;
+$backgroundItem: yellow;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin axisType($type) {
+  @if $type == "cross" {
+    bottom: 0;
+    top: 0;
+    width: 4px;
+    transform: translateX(-50%);
+    background-color: $accent-color;
+  }
+  @if $type == "main" {
+    left: 0;
+    right: 0;
+    height: 4px;
+    width: 100%;
+    background-color: $hot-color;
+  }
+}
+
+body {
+  height: 100vh;
+  @include flex-center();
+  flex-direction: column;
+}
+
+.main {
+  @include flex-center();
+
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  background-color: $background;
+  color: $textColor;
+
+  &::before {
+    content: "Flex container";
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 2rem;
+  }
+
+  &__item {
+    height: 10rem;
+    width: 7rem;
+
+    background-color: $backgroundItem;
+    border: 1px solid black;
+    color: black;
+
+    &__1 {
+      height: 5rem;
+      align-self: flex-start;
+    }
+
+    &__3 {
+      height: 7rem;
+      align-self: end;
+    }
+  }
+}
+
+.axis {
+  position: absolute;
+
+  &::after {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    color: $accent-color;
+    white-space: nowrap;
+    writing-mode: sideways-lr;
+  }
+  &__cross {
+    @include axisType("cross");
+    &::after {
+      content: "Cross Axis";
+    }
+  }
+
+  &__main {
+    @include axisType("main");
+    &::after {
+      content: "Main Axis";
+      writing-mode: horizontal-tb;
+      color: $hot-color;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+/* Set box-sizing cho tất element */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.page-head {
+  text-align: center;
+}
+
+.body-head {
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  /* nên dùng stretch vì nếu center thì các thẻ có thể bị lệch. Do height và width của mỗi item có thể khác nhau */
+  align-items: stretch;
+  /* align-items: center; */
+  justify-content: space-around;
+
+  border: 1px solid black;
+  /* Không khuyến khích để box-sizing cho một thẻ khi nó chưa bị lỗi tràn width */
+  /* box-sizing: border-box; */
+}
+
+.PersonalInfo {
+  /* Không cần width khi nó là một item của flexbox */
+  /* width: 33%; */
+  border: 1px solid black;
+  /* Sửa lại cho giống đề bài */
+  padding: 0.5rem;
+  /* --- */
+  margin: 1px;
+  flex: 1 1 auto;
+}
+
+/* Không để header rớt dòng */
+.PersonalInfo > h2 {
+  white-space: nowrap;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+
+  /* Có thể tham khảo cách làm này */
+  /* width: 100%;
+  display: inline-block;
+  object-fit: cover; */
+}
+
+.jane {
+  list-style-type: disc;
+}
+
+.johnny {
+  list-style-type: lower-alpha;
+}
+
+.luke {
+  list-style-type: circle;
+}

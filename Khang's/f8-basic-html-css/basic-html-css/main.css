@@ -1,0 +1,20 @@
+h1 {
+  color: purple;
+  font-size: 100px;
+}
+
+#first-heading {
+  color: red;
+}
+
+.second-heading {
+  color: blue;
+}
+
+* /*universal*/ {
+  color: red;
+}
+
+html /*inherited*/ {
+  color: seagreen;
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background: linear-gradient(135deg, rgb(156, 156, 233), rgb(76, 76, 230))
+    fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+/* Form */
+.form {
+  position: relative;
+  padding: 1rem 2rem;
+
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.decor {
+  position: absolute;
+  bottom: 55%;
+  left: -2%;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(rgb(197, 209, 26), rgb(248, 2, 2)) fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
+}
+.decor::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid black;
+  transform: rotate(-45deg);
+}
+.form div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.form div label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.score div {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.score input {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.ide {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button */
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+button {
+  padding: 0.5rem 2rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
