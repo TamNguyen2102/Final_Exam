@@ -1,0 +1,86 @@
+$body-color: #fff8df;
+$register-color: #dd2c2c;
+$reset-color: #e3a73f;
+$error-color: #bc1313;
+$input-hover: #fff5cf;
+$input-focus: #f3de8e;
+$border-input-focuse: #d97000;
+
+@mixin displayFlex($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+body {
+  @include displayFlex(column);
+  height: 100vh;
+  background-color: $body-color;
+}
+
+.form {
+  @include displayFlex(column);
+  width: 50vw;
+
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+
+  & > div {
+    @include displayFlex(column);
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    & > input {
+      padding: 0.5rem;
+
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $input-hover;
+      }
+      &:focus {
+        background-color: $input-focus;
+        border-color: $border-input-focuse;
+      }
+    }
+
+    & > select {
+      width: 100%;
+    }
+  }
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  color: $error-color;
+}
+
+.score {
+  & > div {
+    width: 100%;
+    & > #scoreRange {
+      width: 100%;
+    }
+  }
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: $register-color;
+}
+button[type="reset"] {
+  background-color: $reset-color;
+}

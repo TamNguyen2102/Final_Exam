@@ -1,29 +1,40 @@
-.chatbox{
-    border: solid black thin;
-    width: 25%;
-    height: 450px;
-    border-radius: 6px;
-    background-color: honeydew;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.chatA{
-    display: inline;
-    float: left;
-    max-width: 190px;
-    margin-right: 190px;
-    margin-left: 8px;
-    border: solid black thin;
-    width: auto;
-    border-radius: 6px;
-    background-color: ghostwhite; 
+
+.chatbox {
+  border: solid black thin;
+  width: 50%;
+  height: 450px;
+  overflow-y: scroll;
+  border-radius: 6px;
+  background-color: honeydew;
 }
-.chatB{
-    display:inline-block;
-    float: right;
-    max-width: 190px;
-    margin-left: 190px;
-    margin-right: 8px;
-    border: solid black thin;
-    border-radius: 6px;
-    background-color: greenyellow; 
-    text-align: left;
+.chatA {
+  display: inline;
+  float: left;
+  max-width: 50%;
+  padding: 0.5rem;
+  margin-top: 5px;
+  margin-right: 200px;
+  margin-left: 8px;
+  border: solid black thin;
+  width: auto;
+  border-radius: 6px;
+  background-color: ghostwhite;
+}
+.chatB {
+  display: inline-block;
+  float: right;
+  padding: 0.5rem;
+  margin-top: 5px;
+
+  margin-left: 190px;
+  margin-right: 8px;
+  border: solid black thin;
+  border-radius: 6px;
+  background-color: greenyellow;
+  text-align: left;
 }
