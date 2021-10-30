@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@mixin displayFlex($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+body {
+  @include displayFlex(column);
+
+  justify-content: space-between;
+
+  min-width: 540px;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+
+  @media (max-width: 720px) {
+    height: auto;
+  }
+}
+// Header
+.header {
+  width: 100vw;
+  background-color: rgb(9, 37, 9);
+
+  h1 {
+    margin: 0;
+    padding: 1.5rem 1rem;
+    font-size: 3rem;
+    color: white;
+  }
+}
+
+// Main section
+.main-section {
+  @include displayFlex();
+
+  align-items: flex-start;
+  justify-content: stretch;
+  flex-grow: 1;
+  padding: 1rem;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  @media (min-width: 720px) and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
+
+  //   Country
+  &__country {
+    margin-right: 1rem;
+    ul {
+      padding: 0;
+      list-style: none;
+      @media (max-width: 720x) {
+        margin: 0 5rem;
+      }
+      li {
+        width: 30vw;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        color: white;
+        background-color: rgb(53, 54, 78);
+        @media (max-width: 720px) {
+          width: 90vw;
+        }
+      }
+    }
+  }
+  // Article
+  &__article {
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    @media (min-width: 720px) and (max-width: 1200px) {
+      width: calc(60vw);
+    }
+  }
+
+  &__lorem {
+    @include displayFlex(column);
+
+    padding: 1rem;
+    background-color: #3f3f3f;
+    color: white;
+
+    & > * {
+      text-align: center;
+    }
+    &__header {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}
+
+// Footer
+footer {
+  justify-self: end;
+  width: 100vw;
+  text-align: center;
+
+  padding: 2rem;
+  background-color: rgb(9, 37, 9);
+  color: white;
+}

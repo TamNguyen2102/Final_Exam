@@ -72,13 +72,19 @@
 .login-page .navbar__menu li {
   margin: 0 1rem;
 }
+
 .navbar__menu a{
   color: #fff;
   text-decoration: none;
 }
+<<<<<<< HEAD
 .navbar__menu a:hover{
   opacity: 50%;
 }
+=======
+
+
+>>>>>>> cc3418643480f01316e01bc78301dedcbc2ee489
 /*--------- Main section------------- */
 .login-page .main-section {
   flex-grow: 1;
@@ -146,16 +152,19 @@
   font-weight: 600;
   line-height: 1.5;
   color: #fff;
+
   /* border-color: #5e72e4;
   background-color: #5e72e4; */
   border: 3px solid #42fbf2;
   position: relative;
   z-index: 1;
   background-color: black;
+
   border-radius: 0.375rem;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
+
 /* ------------Input--------------- */
 .login__form__item input:focus{
   outline: 0;

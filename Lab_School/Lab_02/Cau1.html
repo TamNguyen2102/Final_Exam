@@ -2,9 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cau 1</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Cau1.css" />
+    <style></style>
   </head>
-  <body></body>
+  <body>
+    <h3>student schedule</h3>
+    <table>
+      <tbody>
+        <tr class="theader-row">
+          <td class="theader">Day/Period</td>
+          <td class="theader">I</td>
+          <td class="theader">II</td>
+          <td rowspan="8" class="selftime lunch">lunch</td>
+          <td class="theader">III</td>
+          <td class="theader">IV</td>
+        </tr>
+        <tr>
+          <td class="days">Monday</td>
+          <td>Math</td>
+          <td>Physics</td>
+          <td colspan="2" rowspan="2" class="no-class"></td>
+        </tr>
+        <tr>
+          <td class="days">Tuesday</td>
+          <td colspan="2" class="selftime">LAB</td>
+        </tr>
+        <tr>
+          <td class="days">Wednesday</td>
+          <td>History</td>
+          <td>Music</td>
+          <td colspan="2">SEMINAR</td>
+        </tr>
+        <tr>
+          <td class="days">Thursday</td>
+          <td>Physical Education</td>
+          <td>Swimming</td>
+          <td>Chemistry</td>
+          <td>Biology</td>
+        </tr>
+        <tr>
+          <td class="days">Friday</td>
+          <td colspan="2" class="selftime">LAB</td>
+          <td>Geography</td>
+          <td>Informatics</td>
+        </tr>
+        <tr>
+          <td class="days">Saturday</td>
+          <td>Math</td>
+          <td>Physics</td>
+          <td colspan="2" class="selftime">LAB</td>
+        </tr>
+        <tr>
+          <td class="days">Sunday</td>
+          <td colspan="2" class="no-class"></td>
+          <td class="no-class"></td>
+          <td>Homework</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
