@@ -78,10 +78,6 @@
   text-decoration: none;
 }
 
-.navbar__menu a:hover{
-  opacity: 50%;
-}
-
 /*--------- Main section------------- */
 .login-page .main-section {
   flex-grow: 1;
@@ -170,62 +166,62 @@
   position: relative;
 }
 .login__form__item input ~ .focus-border:before,
-
-.login__form__item input ~ .focus-border:after{
-  content: ""; 
-  position: absolute; 
-  top: 0; right: 0; 
-  width: 0; 
-  height: 2px; 
-  background-color: #3399FF; 
-  transition: 0.2s; 
+.login__form__item input ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.2s;
   transition-delay: 0.2s;
 }
-.login__form__item input ~ .focus-border:after{
-  top: auto; 
-  bottom: 0; 
-  right: auto; 
-  left: 0; 
+.login__form__item input ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
   transition-delay: 0.6s;
 }
 .login__form__item input ~ .focus-border i:before,
-.login__form__item input ~ .focus-border i:after{
-  content: ""; 
-  position: absolute; 
-  top: 0; 
-  left: 0; width: 2px; 
-  height: 0; 
-  background-color: #3399FF; 
+.login__form__item input ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
   transition: 0.2s;
 }
-.login__form__item input ~ .focus-border i:after{
-  left: auto; 
-  right: 0; 
-  top: auto; 
-  bottom: 0; 
+.login__form__item input ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
   transition-delay: 0.4s;
 }
 .login__form__item input:focus ~ .focus-border:before,
-.login__form__item input:focus ~ .focus-border:after{
-  width: 100%; 
-  transition: 0.2s; 
+.login__form__item input:focus ~ .focus-border:after {
+  width: 100%;
+  transition: 0.2s;
   transition-delay: 0.6s;
 }
-.login__form__item input:focus ~ .focus-border:after{
+.login__form__item input:focus ~ .focus-border:after {
   transition-delay: 0.2s;
 }
 .login__form__item input:focus ~ .focus-border i:before,
-.login__form__item input:focus ~ .focus-border i:after{
-  height: 100%; 
+.login__form__item input:focus ~ .focus-border i:after {
+  height: 100%;
   transition: 0.2s;
 }
-.login__form__item input:focus ~ .focus-border i:after{
+.login__form__item input:focus ~ .focus-border i:after {
   transition-delay: 0.4s;
 }
 /* ------------Hover sign in button------ */
-.btn-s:hover{
-  color: rgb(0, 0, 0);
-
+.btn-s:hover {
+  color: #333;
   cursor: pointer;
 }
 .btn-s:before {
@@ -616,48 +612,4 @@
   color: black;
   height: 500px;
   margin-right: 2rem;
-}
-/* ============================================== */
-/* ==========404 Page======================== */
-/* ===========================================  */
-.body-404{
-  margin: 0;
-  padding: 0;
-  font-family: "montserrat",sans-serif;
-  min-height: 100vh;
-  background-image: linear-gradient(125deg,#6a89cc,#b8e994);
-}
-.err-404{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: #343434
-}
-
-.err-404 h1{
-  font-size: 160px;
-  margin: 0;
-  font-weight: 900;
-  letter-spacing: 20px;
-  background: url(./images/bg.jpg) center no-repeat;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.err-404 a{
-  text-decoration: none;
-  background: #e55039aa;
-  color: #fff;
-  padding: 12px 24px;
-  display: inline-block;
-  border-radius: 25px;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: 0.4s;
-}
-
-.err-404 a:hover{
-  background: #e55039;
 }
