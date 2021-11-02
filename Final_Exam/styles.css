@@ -73,18 +73,15 @@
   margin: 0 1rem;
 }
 
-.navbar__menu a{
+.navbar__menu a {
   color: #fff;
   text-decoration: none;
 }
-<<<<<<< HEAD
+
 .navbar__menu a:hover{
   opacity: 50%;
 }
-=======
 
-
->>>>>>> cc3418643480f01316e01bc78301dedcbc2ee489
 /*--------- Main section------------- */
 .login-page .main-section {
   flex-grow: 1;
@@ -166,11 +163,14 @@
 }
 
 /* ------------Input--------------- */
-.login__form__item input:focus{
+.login__form__item input:focus {
   outline: 0;
 }
-.login__form__item{position: relative;}
+.login__form__item {
+  position: relative;
+}
 .login__form__item input ~ .focus-border:before,
+
 .login__form__item input ~ .focus-border:after{
   content: ""; 
   position: absolute; 
@@ -225,9 +225,10 @@
 /* ------------Hover sign in button------ */
 .btn-s:hover{
   color: rgb(0, 0, 0);
+
   cursor: pointer;
 }
-.btn-s:before{
+.btn-s:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -238,14 +239,13 @@
   content: "";
   background-color: #42fbf2;
 }
-.btn-s:hover:before{
+.btn-s:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
   opacity: 1;
   z-index: -1;
 }
-
 
 /* --------------- Footer --------------- */
 .login-page .footer {
@@ -268,7 +268,7 @@
   top: 0;
   height: 100%;
   width: 78px;
-  background: #11101d;
+  background: #172b4d;
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -367,7 +367,7 @@
   border: none;
   border-radius: 12px;
   transition: all 0.5s ease;
-  background: #1d1b31;
+  background: #11c7eb;
 }
 .sidebar.open input {
   padding: 0 20px 0 50px;
@@ -379,16 +379,16 @@
   left: 0;
   transform: translateY(-50%);
   font-size: 22px;
-  background: #1d1b31;
+  background: #11c7eb;
   color: #fff;
 }
 .sidebar.open .bx-search:hover {
-  background: #1d1b31;
+  background: #0e7c92;
   color: #fff;
 }
 .sidebar .bx-search:hover {
   background: #fff;
-  color: #11101d;
+  color: #0e7c92;
 }
 .sidebar li a {
   display: flex;
@@ -398,7 +398,7 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #11101d;
+  background: #106cb8;
 }
 .sidebar li a:hover {
   background: #fff;
@@ -434,7 +434,7 @@
   left: 0;
   bottom: -8px;
   padding: 10px 14px;
-  background: #1d1b31;
+  background: #0c1629;
   transition: all 0.5s ease;
   overflow: hidden;
 }
