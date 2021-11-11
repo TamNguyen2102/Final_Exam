@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <title>Exercise 3</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .first-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .first-area-item,
+      .second-area-item {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      .second-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 2rem;
+      }
+
+      .second-area-item img {
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Xếp hình</h1>
+    <div class="first-area">
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+      <div class="first-area-item"></div>
+    </div>
+
+    <div class="second-area">
+      <div class="second-area-item">
+        <img id="img1" src="./images/cntt_01.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img2" src="./images/cntt_02.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img3" src="./images/cntt_03.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img4" src="./images/cntt_04.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img5" src="./images/cntt_05.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img6" src="./images/cntt_06.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img7" src="./images/cntt_07.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img8" src="./images/cntt_08.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img9" src="./images/cntt_09.gif" alt="" />
+      </div>
+      <div class="second-area-item">
+        <img id="img10" src="./images/cntt_10.gif" alt="" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    $(function () {
+      $("#img1").draggable({ snap: ".first-area-item" });
+      $("#img2").draggable({ snap: ".first-area-item" });
+      $("#img3").draggable({ snap: ".first-area-item" });
+      $("#img4").draggable({ snap: ".first-area-item" });
+      $("#img5").draggable({ snap: ".first-area-item" });
+      $("#img6").draggable({ snap: ".first-area-item" });
+      $("#img7").draggable({ snap: ".first-area-item" });
+      $("#img8").draggable({ snap: ".first-area-item" });
+      $("#img9").draggable({ snap: ".first-area-item" });
+      $("#img10").draggable({ snap: ".first-area-item" });
+    });
+  </script>
+</html>
