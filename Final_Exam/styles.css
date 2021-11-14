@@ -580,23 +580,24 @@
   justify-content: space-between;
 }
 
+/* User info display */
 .user-info-aside {
-  /* position: relative; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: stretch;
   flex-grow: 1;
   height: 500px;
+  padding: 0 2rem;
   background-color: #fff;
-  color: black;
+  color: #32325d;
   border-radius: 0.375rem;
   box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15) !important;
 }
 
+/* Image */
 .user-info-aside img {
-  /* position: absolute;
-  top: 0;
-  left: 50%; */
   height: 200px;
   width: 200px;
   object-fit: cover;
@@ -606,10 +607,68 @@
   border-radius: 50%;
 }
 
-.user-edit-aside {
+/* Gender and position */
+.user-info-aside .first-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.user-info-aside .first-info div {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.user-info-aside .first-info div .label {
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  width: 70px;
+  font-weight: 700;
+}
+
+/* Name */
+.user-info-aside .second-info {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+/* Phone */
+.user-info-aside .third-info {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 2rem 2rem 1rem 2rem;
+  border-top: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+/* User task display */
+.user-task-aside {
   flex-grow: 2;
   background-color: #fff;
   color: black;
   height: 500px;
   margin-right: 2rem;
+}
+
+@media (max-width: 920px) {
+  .user-profile .main-section {
+    flex-direction: column;
+  }
+
+  .user-info-aside {
+    flex-grow: 1;
+  }
+
+  .user-task-aside {
+    margin-top: 1rem;
+    margin-right: 0;
+  }
 }
