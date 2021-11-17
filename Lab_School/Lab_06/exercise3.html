@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>PHP Exercises</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 my-5 mx-auto border rounded px-3 py-3">
+          <h6 class="text-center mb-3">Gợi ý tên quốc gia</h6>
+          <input
+            oninput="suggest(this.value)"
+            type="text"
+            class="form-control"
+            name="country"
+            id="country"
+            placeholder="Nhập ít nhất 2 ký tự"
+          />
+          <div id="countryList"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $("#country").keyup(function () {
+        let query = $(this).val();
+        if (query != "" && query.length >= 2) {
+          $.ajax({
+            url: "./",
+            method: "POST",
+            data: { query: query },
+            success: function (data) {
+              $("#countryList").fadeIn();
+              $("#countryList").html(data);
+            },
+          });
+        } else {
+          $("#countryList").fadeOut();
+          $("#countryList").html("");
+        }
+      });
+      $(document).on("click", "li", function () {
+        $("#country").val($(this).text());
+        $("#countryList").fadeOut();
+      });
+    });
+  </script>
+</html>
